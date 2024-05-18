@@ -11,6 +11,50 @@
   <meta content="" name="keywords">
 
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  
+  <style>
+    /* Product title in food modal style */
+    .styled-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #d9534f;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-uppercase {
+        font-family: 'Georgia', serif;
+        letter-spacing: 0.1em;
+    }
+
+    /* Food Information in food modal style */
+    .styled-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #d9534f;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #5bc0de;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid #5bc0de;
+        padding-bottom: 0.5rem;
+    }
+
+    .text-uppercase {
+        font-family: 'Georgia', serif;
+        letter-spacing: 0.1em;
+    }
+  </style>
+  
 </head>
 
 <body>
@@ -19,14 +63,14 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <h1>HFood<span>.</span></h1>
+        <h1 style="font-family: 'Pacifico', cursive; font-size: 2em; color: #ff7f50;">SweetHaven<span style="color: #ffbf00;">.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#food">About</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><a href="#contact">Contact</a></li>
           <li class="dropdown"><a href=""><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -68,15 +112,15 @@
     <div class="container">
       <div class="row justify-content-between gy-5">
         <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+          <h2 data-aos="fade-up">Enjoy Your <br>Delicious Sweet Food</h2>
+          <p data-aos="fade-up" data-aos-delay="100">We're thrilled to see you. Dive in and explore our latest mouthwatering treats and exclusive offers just for you. Enjoy the sweetest experience!</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
             <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
             <a href="https://www.youtube.com/" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2020-5/salmon-avocado-eggs-1296x728-header.jpg?w=1155&h=1528" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          <img src="https://media.timeout.com/images/101895261/image.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
       </div>
     </div>
@@ -102,19 +146,14 @@
           </div>
           <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+              <p data-aos="fade-up" data-aos-delay="100">
+                Welcome to SweetHaven, where every treat is a taste of paradise. Our passion for creating delightful confections drives us to use only the finest ingredients and traditional techniques, ensuring every bite is a moment of bliss.
               </p>
-              <ul>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              <br>
+              <p data-aos="fade-up" data-aos-delay="100">
+                At SweetHaven, we believe in the magic of sweets to bring joy and create cherished memories. From our classic cakes to our innovative pastries, each creation is crafted with love and precision. Whether you're celebrating a special occasion or simply indulging your sweet tooth, our wide variety of treats promises something for everyone.
               </p>
+              <br>
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
@@ -133,7 +172,7 @@
 
             <div class="section-header">
                 <h2>Our Menu</h2>
-                <p>Check Our <span>Yummy Menu</span></p>
+                <p>Check Our <span>Sweet Menu</span></p>
             </div>
 
             <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -199,7 +238,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="productModalLabel">{{ $product->title }}</h5>
+                                            <h5 class="modal-title styled-title" id="productModalLabel">{{ $product->title }}</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -209,7 +248,7 @@
                                                 <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid">                                         
                                                 </div>
                                                 <div class="col-md-4">
-                                                  <div class="text-center fs-5">Food Information</div>
+                                                  <div class="info-title">Food Information</div>
                                                   <p>{!! $product->description !!}</p>
                                                 </div>
                                               </div>
@@ -274,15 +313,24 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="productModalLabel">{{ $product->title }}</h5>
+                                            <h5 class="modal-title styled-title" id="productModalLabel">{{ $product->title }}</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid">
-                                            <p>{!! $product->description !!}</p>
+                                          <div class="container">
+                                            <div class="row">
+                                              <div class="col-md-8">
+                                              <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid">
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="info-title">Food Information</div>
+                                                <p>{!! $product->description !!}</p>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                                             <button type="button" class="btn btn-primary">Order</button>
                                         </div>
                                     </div>
@@ -415,7 +463,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>HFood</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>SweetHaven</span></strong>. All Rights Reserved
       </div>
     </div>
 

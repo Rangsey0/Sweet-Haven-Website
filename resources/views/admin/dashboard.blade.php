@@ -12,7 +12,7 @@
                                 <div class="col-md-12">
                                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                                         <div class="p-6 text-gray-900">
-                                            <h3>Total Users: {{ $totalUsers ?? 0 }}</h3>
+                                            <h3>Total Account Created: {{ $totalUsers ?? 0 }}</h3>
                                         </div>
                                     </div>
                                 </div>

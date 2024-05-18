@@ -8,12 +8,29 @@ use App\Models\Category;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with('category')->orderByDesc('id')->get();
-        $total = Product::count();
-        return view('admin.product.home', compact('products', 'total'));
+        $search = $request->input('search');
+
+        $productsQuery = Product::with('category')->orderByDesc('id');
+
+        if ($search) {
+            // Check if the search query is numeric, indicating it's an ID search
+            if (is_numeric($search)) {
+                $productsQuery->where('id', $search);
+            } else {
+                // If not numeric, search by title or description
+                $productsQuery->where('title', 'like', '%' . $search . '%')
+                          ->orWhere('description', 'like', '%' . $search . '%');
+            }
+        }
+
+        $products = $productsQuery->paginate(5);
+
+        return view('admin.product.home', compact('products', 'search'));
     }
+
+
 
     public function showFoodProducts()
     {

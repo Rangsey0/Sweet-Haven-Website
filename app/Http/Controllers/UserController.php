@@ -9,10 +9,28 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::all();
-        return view('admin.users.index', compact('users'));
+        $search = $request->input('search');
+
+        $usersQuery = User::query();
+
+        if ($search) {
+            // Check if the search query is numeric, indicating it's an ID search
+            if (is_numeric($search)) {
+                $usersQuery->where('id', $search);
+            } else {
+                // If not numeric, search by name or email
+                $usersQuery->where(function($query) use ($search) {
+                    $query->where('name', 'like', '%' . $search . '%')
+                          ->orWhere('email', 'like', '%' . $search . '%');
+                });
+            }
+        }
+ 
+        $users = $usersQuery->paginate(10);
+
+        return view('admin.users.index', compact('users', 'search'));
     }
 
     public function totalUsers()

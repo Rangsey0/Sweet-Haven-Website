@@ -8,6 +8,12 @@
                 <div class="py-12">
                     <div class="container">
                         <a href="{{ route('admin.categories.create') }}" class="btn btn-primary mb-3">Create Category</a>
+                        <form action="{{ route('admin.categories.index') }}" method="GET" class="mb-3">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search categories..." name="query" value="{{ $query ?? '' }}">
+                                <button type="submit" class="btn btn-outline-secondary">Search</button>
+                            </div>
+                        </form>
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
@@ -35,10 +41,10 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $categories->links() }} <!-- Add pagination links -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </x-app-layout>
-
