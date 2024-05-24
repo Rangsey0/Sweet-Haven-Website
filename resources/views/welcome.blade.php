@@ -6,7 +6,7 @@
     <title>Welcome to Our Website</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <!-- Styles -->
     <style>
         body {
@@ -23,7 +23,7 @@
         }
 
         .background {
-            background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('https://images6.alphacoders.com/905/thumb-1920-905565.jpg');
             background-size: cover;
             background-position: center;
             position: absolute;
@@ -40,30 +40,59 @@
             padding: 20px;
             position: relative;
             margin-left: 20px; /* Adjust this value as needed */
+            background: rgba(255, 255, 255, 0.8); /* Adding a background to make the content more readable */
+            border-radius: 10px; /* Rounded corners for the container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for better visibility */
+        }
+
+        .logo {
+            width: 120px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%; /* Making the logo circular */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow to the logo */
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
             margin-bottom: 20px;
+            /* color: #FF2D20; */
+            color: #FF4500;
+            text-shadow: 
+                2px 2px 0 #000, 
+                -2px -2px 0 #000, 
+                2px -2px 0 #000, 
+                -2px 2px 0 #000; /* Creates an outline effect */
         }
 
         p {
-            font-size: 1.1rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
             margin-bottom: 30px;
+            color: white;
+            text-shadow: 
+                2px 1px 0 #000, 
+                -1px -1px 0 #000, 
+                1px -1px 0 #000, 
+                -1px 1px 0 #000; /* Creates an outline effect */
         }
 
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #FF2D20;
+            background: linear-gradient(45deg, #FF2D20, #FF7F50);
             color: #fff;
             text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            border-radius: 50px; /* Rounded corners for a pill-shaped button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .btn:hover {
-            background-color: #E6271F;
+            background: linear-gradient(45deg, #E6271F, #FF4500);
+            transform: translateY(-3px); /* Slight lift effect on hover */
         }
 
         @media (max-width: 768px) {
@@ -72,10 +101,16 @@
                 margin-left: 0; /* Reset margin for smaller screens */
             }
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             p {
                 font-size: 1rem;
+            }
+            .logo {
+                width: 80px; /* Adjust the size for smaller screens */
+            }
+            .btn {
+                padding: 10px 20px;
             }
         }
     </style>
@@ -83,8 +118,9 @@
 <body>
     <div class="background"></div>
     <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <p>We're excited to have you here. Explore our services and discover what we have to offer.</p>
+        <img src="{{ asset('images/SweetHaven-Logo.png') }}" alt="Your Image" class="logo">
+        <h1>Welcome to Sweet Haven</h1>
+        <p>Discover irresistible treats, crafted with love. Indulge in our finest cakes, chocolates and more. Make your day sweeter with us!</p>
         <a href="{{ route('login') }}" class="btn">Log in</a>
         <a href="{{ route('register') }}" class="btn">Register</a>
     </div>

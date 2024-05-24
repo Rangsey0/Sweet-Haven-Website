@@ -1,9 +1,9 @@
 <x-app-layout>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-auto sidebar px-0">
-            @include('admin.sidebar')
-        </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-auto sidebar px-0">
+                @include('admin.sidebar')
+            </div>
             <div class="col">
                 <div class="py-12">
                     <div class="container">
@@ -15,6 +15,12 @@
                                             <h1 class="mb-0">Food list</h1>
                                             <a href="{{ route('admin/products/create') }}" class="btn btn-primary mb-3">Add Product</a>
                                         </div>
+                                        <form action="{{ route('admin/products') }}" method="GET" class="mb-3">
+                                            <div class="input-group">
+                                                <input type="text" name="search" class="form-control" placeholder="Search for...">
+                                                <button class="btn btn-outline-secondary" type="submit">Search</button>
+                                            </div>
+                                        </form>
                                         <hr />
                                         @if(Session::has('success'))
                                             <div class="alert alert-success" role="alert">
@@ -58,6 +64,7 @@
                                                 @endforelse
                                             </tbody>
                                         </table>
+                                        {{ $products->appends(request()->input())->links() }} <!-- Add this line for pagination with search -->
                                     </div>
                                 </div>
                             </div>
@@ -68,5 +75,3 @@
         </div>
     </div>
 </x-app-layout>
-
-

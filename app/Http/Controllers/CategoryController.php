@@ -7,11 +7,25 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::all();
-        return view('admin.categories.index', compact('categories'));
+        $query = $request->get('query');
+        $categories = Category::query();
+
+        if (!empty($query)) {
+            // Check if the query is numeric, indicating it's an ID search
+            if (is_numeric($query)) {
+                $categories->where('id', $query);
+            } else {
+                $categories->where('name', 'like', '%' . $query . '%');
+            }
+        }
+
+        $categories = $categories->paginate(10);
+
+        return view('admin.categories.index', compact('categories', 'query'));
     }
+
 
     public function create()
     {

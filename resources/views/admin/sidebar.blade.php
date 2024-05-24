@@ -1,11 +1,21 @@
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    .container-fluid, .row, .flex {
+        height: 100%;
+    }
+</style>
+
 <div class="container">
-    <div class="row flex bg-dark">
+    <div class="row flex bg-dark vh-100">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-4 pt-2 text-white vh-100">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <a href="/home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white px-3 py-4">
-                            <span class="fs-5 d-none d-sm-inline" style="color: greenyellow;"><b>H</b><span style="color: red;"><b>Food</b></span>
+                            <span class="fs-5 d-none d-sm-inline" style="color: greenyellow;"><b>Sweet</b><span style="color: red;"><b>Haven</b></span>
                             </span>
                         </a>
                     </div>
