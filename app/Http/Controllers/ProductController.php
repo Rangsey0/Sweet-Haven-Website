@@ -32,12 +32,28 @@ class ProductController extends Controller
 
 
 
-    public function showFoodProducts()
+    public function showFoodProducts(Request $request)
     {
-        $products = Product::all();
+        $search = $request->input('search');
+
+        $productsQuery = Product::with('category')->orderByDesc('id');
+
+        if ($search) {
+            // Check if the search query is numeric, indicating it's an ID search
+            if (is_numeric($search)) {
+                $productsQuery->where('id', $search);
+            } else {
+                // If not numeric, search by title or description
+                $productsQuery->where('title', 'like', '%' . $search . '%')
+                          ->orWhere('description', 'like', '%' . $search . '%');
+            }
+        }
+
+        $products = $productsQuery->paginate(8);
         $categories = Category::all();
-        return view('dashboard', ['products' => $products, 'categories' => $categories]);
-    }       
+
+        return view('dashboard', compact('products', 'categories', 'search'));
+    }   
     
     public function create()
     {
