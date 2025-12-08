@@ -62,7 +62,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+      <a href="#hero" class="logo d-flex align-items-center me-auto me-lg-0">
         <h1 style="font-family: 'Pacifico', cursive; font-size: 2em; color: #ff8243;">SweetHaven<span style="color: #ffbf00;">.</span></h1>
       </a>
 
@@ -141,7 +141,7 @@
           <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg) ;" data-aos="fade-up" data-aos-delay="150">
             <div class="call-us position-absolute">
               <h4>Book a Table</h4>
-              <p>+1 5589 55488 55</p>
+              <p>+855 5589 55488 55</p>
             </div>
           </div>
           <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
@@ -362,7 +362,7 @@
         </div>
 
         <div class="mb-3">
-          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1954.3766246415626!2d104.88957004787062!3d11.569538642218172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519f11b381e5%3A0x93c85e978d6d0c6e!2sCKCC%20(Cambodia-Korea%20Cooperation%20Center)!5e0!3m2!1sen!2skh!4v1716627732577!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen></iframe>
         </div><!-- End Google Maps -->
 
         <div class="row gy-4">
@@ -372,7 +372,7 @@
               <i class="icon bi bi-map flex-shrink-0"></i>
               <div>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>A108 Adam Street, cambodia,</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -392,7 +392,7 @@
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>855 5589 55488 55</p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -425,8 +425,8 @@
           <div>
             <h4>Address</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022 - US<br>
+              A108 Street <br>
+              Cambodia,  - US<br>
             </p>
           </div>
 
@@ -437,7 +437,7 @@
           <div>
             <h4>Reservations</h4>
             <p>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Phone:</strong> +855 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
           </div>

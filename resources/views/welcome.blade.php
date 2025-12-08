@@ -71,9 +71,9 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 30px;
-            color: white;
+            color: #ffefd5;
             text-shadow: 
-                2px 1px 0 #000, 
+                1px 1px 0 #000, 
                 -1px -1px 0 #000, 
                 1px -1px 0 #000, 
                 -1px 1px 0 #000; /* Creates an outline effect */
