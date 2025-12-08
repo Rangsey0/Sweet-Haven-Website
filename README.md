@@ -29,5 +29,3 @@
 -   **Frontend:** Blade templates, Tailwind CSS
 -   **Database:** MySQL
 -   **Optional:** Node.js/NPM for compiling assets
-
----
